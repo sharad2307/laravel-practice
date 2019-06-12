@@ -4,9 +4,10 @@
 	<title></title>
 </head>
 <body>
-	<h1>Projects</h1>
+	<h1>&nbsp;&nbsp;&nbsp;Projects</h1>
 	@foreach($projects as $project)
-	<li>{{ $project->title}}</li>
+	<ul><li>{{ $project->title}}</li></ul>
+	
 	@endforeach
 </body>
 </html>
