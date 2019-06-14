@@ -5,9 +5,16 @@
 </head>
 <body>
 	<h1>&nbsp;&nbsp;&nbsp;Projects</h1>
+
+	<ul>
 	@foreach($projects as $project)
-	<ul><li>{{ $project->title}}</li></ul>
+	<li>
+		<a href="/projects/{{$project->id}}">
+		{{ $project->title}}
+		</a>
+	</li>
 	
 	@endforeach
+	</ul>
 </body>
 </html>
