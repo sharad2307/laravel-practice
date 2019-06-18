@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::resource('projects','ProjectsController');
 
+Route::PATCH('/tasks/{task}','ProjectTasksController@update');
+
 
 
 // Route::get('/projects','ProjectsController@index');
