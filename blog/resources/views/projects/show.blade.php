@@ -19,8 +19,8 @@
 			@method('PATCH')
 			@csrf
 
-			<label class="checkbox" for="completed">
-				<input type="checkbox" name="completed" onchange="this.form.submit()">
+			<label class="checkbox {{ $task->completed ? 'is-complete' : ''}}" for="completed"  >
+				<input type="checkbox" name="completed" onchange="this.form.submit()" {{ $task->completed ? 'checked' : ''}} >
 				{{ $task->description}}
 			</label>
 		</form>
