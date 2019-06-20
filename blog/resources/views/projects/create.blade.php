@@ -42,7 +42,7 @@
 			</div>
 		</div>
 
-	@include('errors')
+		@include('errors')
 
 	</form>
 
