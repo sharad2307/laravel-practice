@@ -31,11 +31,13 @@ class ProjectsController extends Controller
     	// $project = Project::findOrFail($id);
 		return view('projects.edit', compact('project'));
 	}
-
+ 
 
 	public function show(Project $project)
 	{
     	// $project = Project::findOrFail($id);
+    	// abort_unless(auth()->user()->owns($project),403);
+    	abort_if($project->owner_id !== auth()->id(),403);
 		return view('projects.show' , compact('project'));
 	}
 
