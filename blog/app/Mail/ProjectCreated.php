@@ -11,14 +11,15 @@ class ProjectCreated extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $project;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($project)
     {
-        //
+        $this->project = $project;
     }
 
     /**

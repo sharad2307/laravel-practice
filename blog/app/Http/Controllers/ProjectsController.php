@@ -83,7 +83,7 @@ class ProjectsController extends Controller
     	// $project->save();
 
     	\Mail::to('manuandmehrotra@gmail.com')->send(
-    		new ProjectCreated()
+    		new ProjectCreated($project)
     	);
 
 		return redirect('/projects');
