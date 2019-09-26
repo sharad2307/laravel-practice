@@ -32,7 +32,10 @@
 			<label class="label" for="description">Description</label>
 
 			<div class="control">
-				<textarea name="description" class="textarea {{ $errors->has('title')? 'is-danger': ''}}" required>{{old('description')}}</textarea>
+				
+					<textarea name="description" class="textarea {{ $errors->has('title')? 'is-danger': ''}}" required>{{old('description')}}</textarea>
+			
+				
 			</div>
 		</div>
 
